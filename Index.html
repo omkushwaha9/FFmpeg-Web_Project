@@ -24,7 +24,7 @@
         const context = canvas.getContext("2d");
         const frames = {
             currentIndex: 0,
-            maxIndex: 1345
+            maxIndex:1345,
         }
 
         const images = [];
@@ -32,7 +32,7 @@
 
         function preloadImages() {
             for (var i = 1; i <= frames.maxIndex; i++) {
-                const imageUrl = `./frames/frame_${i.toString().padStart(5, "0")}.jpg`;
+                const imageUrl = `./frames/frame_${i.toString().padStart(4, "0")}.jpg`;
                 const img = new Image();
                 img.src = imageUrl;
 
@@ -56,7 +56,7 @@
                 canvas.width = window.innerWidth;
                 canvas.height = window.innerHeight;
 
-                const scaleX = canvas.width / image.width;
+                const scaleX = canvas.width / img.width;
                 const scaleY = canvas.height / img.height;
 
                 const newWidth = img.width * scaleX;
@@ -85,7 +85,7 @@
             tl.to(frames,{
                 currentIndex: frames.maxIndex,
                 onUpdate: function(){
-                    loadImage(math.floor(frames.currentIndex));
+                    loadImage(Math.floor(frames.currentIndex));
                 }
             })
         }
