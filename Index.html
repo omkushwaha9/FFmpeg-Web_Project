@@ -89,12 +89,16 @@
                   end:"bottom bottom"
                 }
             })
-            tl.to(frames,{
-                currentIndex: frames.maxIndex,
+             function updateFrame(index){
+                return{
+                currentIndex: index,
                 onUpdate: function(){
                     loadImage(Math.floor(frames.currentIndex));
                 }
-            })
+            }
+             }
+
+            tl.to(frames,updateFrame(50))
         }
         preloadImages();
 
