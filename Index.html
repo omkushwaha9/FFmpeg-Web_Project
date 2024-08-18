@@ -19,12 +19,22 @@
                     </h1>
                     <h1 class="text-3xl">SHAPING BRANDS -> CRAFTING MOTION</h1>
                 </div>
-                <div class="absolute animate2 flex z-[2] text-white  bottom-10 w-1/2 right-10 text-right">
+                <div class="absolute animate2 flex z-[2] text-white bottom-10 w-1/2 right-10 text-right opacity-0">
                     <h1 class="leading-20 font-[100] font-semibold uppercase text-6xl">
                         Transforming Vision
                     </h1>
                     <h1 class="text-xl w-1/2">
                         Building identity and inspiring action. Sculpting digital expo resonate.
+                    </h1>
+                </div>
+                <div
+                    class="absolute animate3 z-[2] text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  text-center">
+                    <h1 class="leading-20 font-[100] uppercase text-6xl">
+                        Elevating Aesthetics
+                    </h1>
+                    <h1 class="text-xl">
+                        Crafting solutions and exploring new horizons. Evolving narratives and eleveting aesthetics in
+                        every project.
                     </h1>
                 </div>
             </div>
@@ -113,6 +123,9 @@
             tl
                 .to(frames, updateFrame(50), "first")
                 .to(".animate1", { opacity: 0, ease: "linear" }, "first")
+
+                .to(frames, updateFrame(80), "second")
+                .to(".animate2", { opacity: 1, ease: "linear" }, "second")
         }
 
 
