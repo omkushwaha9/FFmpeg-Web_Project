@@ -90,11 +90,11 @@
                 }
             })
         }
-        Window.addEventListener("resize", function(){
+        preloadImages();
+        
+        Window.addEventListener("resize", function () {
             loadImage(Math.floor(frames.currentIndex));
         })
-        preloadImages();
     </script>
 </body>
-
 </html>
