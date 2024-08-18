@@ -13,6 +13,12 @@
         <div class="parent relative w-full h-[2000vh] ">
             <div class="w-full sticky top-0 left-0  h-screen">
                 <canvas class=" w-full h-screen" id="canvas"></canvas>
+                <div class="absolute animate1 z-[2] text-white bottom-10 w-1/2 left-10">
+                 <h1 class="leading-20 font-[100] text-3xl">
+                    &copy; 2024 OK STD 
+                 </h1>
+                 <h1 class="text-3xl">SHAPING BRANDS -> CRAFTING MOTION</h1>
+                </div>
             </div>
         </div>
     </div>
@@ -91,7 +97,7 @@
             })
         }
         preloadImages();
-        
+
         Window.addEventListener("resize", function () {
             loadImage(Math.floor(frames.currentIndex));
         })
