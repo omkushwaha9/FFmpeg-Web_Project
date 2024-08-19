@@ -5,6 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        html.lenis,
+        html.lenis body {
+            height: auto;
+        }
+
+        .lenis.lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+
+        .lenis.lenis-smooth iframe {
+            pointer-events: none;
+        }
+    </style>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -220,18 +242,18 @@
                 .to(".panelism", { scale: 2, ease: "circle" }, "sixteenth")
         }
 
-
-        preloadImages();
-
-        Window.addEventListener("resize", function () {
-            loadImage(Math.floor(frames.currentIndex));
-        })
         const lenis = new Lenis()
 
         function raf(time) {
             lenis.raf(time)
             requestAnimationFrame(raf)
         }
+
+        preloadImages();
+
+        Window.addEventListener("resize", function () {
+            loadImage(Math.floor(frames.currentIndex));
+        })
 
         requestAnimationFrame(raf)
 
@@ -241,10 +263,10 @@
                     scrollTrigger: {
                         trigger: elem,
                         start: "top 90%",
-                        end: "bottom 20%",
+                        end: "bottom 40%",
                         scrub: 2
                     },
-                    opacity: .3
+                    opacity: .5
                 })
             })
 
