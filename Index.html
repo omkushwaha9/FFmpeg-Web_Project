@@ -86,28 +86,28 @@
                 </div>
             </div>
         </div>
-        <div class="w-full py-28 px-10 bg-white ">
-            <h1 class="text-8xl tracking-tighter">&reg; My Recent Works.</h1>
-            <div class="w-1/2 p-3 flex flex-col gap-10 mt-32">
-                <h3 class="text-5xl">RokanMitra</h3>
-                <h3 class="text-5xl">ParallaxWebsite</h3>
-                <h3 class="text-5xl">ochi.design-regenerated</h3>
-                <h3 class="text-5xl">RealtimeClickConting</h3>
-                <h3 class="text-5xl">Draggable-ImageContent</h3>
-                <h3 class="text-5xl">Draggable-MenuBoxes</h3>
-                <h3 class="text-5xl">Jarvis AI</h3>
-                <h3 class="text-5xl">GSAP-React_CircleAnimation</h3>
-                <h3 class="text-5xl">GSAP-React_RandomAnimation</h3>
-                <h3 class="text-5xl">GSAP-React_ImageAnimation</h3>
-                <h3 class="text-5xl">GSAP_Text-Animations</h3>
-                <h3 class="text-5xl">GSAP_NAvbarAnimations</h3>
-                <h3 class="text-5xl">GSAP_CustomCursor</h3>
-                <h3 class="text-5xl">Image-gallery_Next.js</h3>
-                <h3 class="text-5xl">React-Native_BottomSheet</h3>
-                <h3 class="text-5xl">AppUI</h3>
-                <h3 class="text-5xl">TabNavigation</h3>
-                <h3 class="text-5xl">AllAboutBharat</h3>
-                <h3 class="text-5xl">React-NativeAI</h3>
+        <div class="w-full py-24 px-10 bg-white ">
+            <h1 class="text-6xl tracking-tighter">&reg; My Recent Works.</h1>
+            <div class="w-1/2 headings p-3 flex flex-col gap-10 mt-28">
+                <h3 class="text-4xl">RokanMitra</h3>
+                <h3 class="text-4xl">ParallaxWebsite</h3>
+                <h3 class="text-4xl">ochi.design-regenerated</h3>
+                <h3 class="text-4xl">RealtimeClickConting</h3>
+                <h3 class="text-4xl">Draggable-ImageContent</h3>
+                <h3 class="text-4xl">Draggable-MenuBoxes</h3>
+                <h3 class="text-4xl">Jarvis AI</h3>
+                <h3 class="text-4xl">GSAP-React_CircleAnimation</h3>
+                <h3 class="text-4xl">GSAP-React_RandomAnimation</h3>
+                <h3 class="text-4xl">GSAP-React_ImageAnimation</h3>
+                <h3 class="text-4xl">GSAP_Text-Animations</h3>
+                <h3 class="text-4xl">GSAP_NAvbarAnimations</h3>
+                <h3 class="text-4xl">GSAP_CustomCursor</h3>
+                <h3 class="text-4xl">Image-gallery_Next.js</h3>
+                <h3 class="text-4xl">React-Native_BottomSheet</h3>
+                <h3 class="text-4xl">AppUI</h3>
+                <h3 class="text-4xl">TabNavigation</h3>
+                <h3 class="text-4xl">AllAboutBharat</h3>
+                <h3 class="text-4xl">React-NativeAI</h3>
             </div>
         </div>
     </div>
@@ -248,6 +248,7 @@
             lenis.raf(time)
             requestAnimationFrame(raf)
         }
+        requestAnimationFrame(raf)
 
         preloadImages();
 
@@ -255,7 +256,6 @@
             loadImage(Math.floor(frames.currentIndex));
         })
 
-        requestAnimationFrame(raf)
 
         document.querySelectorAll(".headings h3")
             .forEach(function (elem) {
@@ -263,10 +263,10 @@
                     scrollTrigger: {
                         trigger: elem,
                         start: "top 90%",
-                        end: "bottom 40%",
-                        scrub: 2
+                        end: "bottom 20%",
+                        scrub: 2,
                     },
-                    opacity: .5
+                    opacity: .3,
                 })
             })
 
