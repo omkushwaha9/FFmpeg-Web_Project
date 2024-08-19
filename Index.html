@@ -64,29 +64,29 @@
                 </div>
             </div>
         </div>
-        <div class="w-full py-30 px-10 bg-white ">
-         <h1 class="text-8xl tracking-tighter">&reg; My Recent Works.</h1>
-         <div class="w-1/2 p-3 flex flex-col gap-10 mt-32">
-          <h3 class="text-5xl">RokanMitra</h3>
-          <h3 class="text-5xl">ParallaxWebsite</h3>
-          <h3 class="text-5xl">ochi.design-regenerated</h3>
-          <h3 class="text-5xl">RealtimeClickConting</h3>
-          <h3 class="text-5xl">Draggable-ImageContent</h3>
-          <h3 class="text-5xl">Draggable-MenuBoxes</h3>
-          <h3 class="text-5xl">Jarvis AI</h3>
-          <h3 class="text-5xl">GSAP-React_CircleAnimation</h3>
-          <h3 class="text-5xl">GSAP-React_RandomAnimation</h3>
-          <h3 class="text-5xl">GSAP-React_ImageAnimation</h3>
-          <h3 class="text-5xl">GSAP_Text-Animations</h3>
-          <h3 class="text-5xl">GSAP_NAvbarAnimations</h3>
-          <h3 class="text-5xl">GSAP_CustomCursor</h3>
-          <h3 class="text-5xl">Image-gallery_Next.js</h3>
-          <h3 class="text-5xl">React-Native_BottomSheet</h3>
-          <h3 class="text-5xl">AppUI</h3>
-          <h3 class="text-5xl">TabNavigation</h3>
-          <h3 class="text-5xl">AllAboutBharat</h3>
-          <h3 class="text-5xl">React-NativeAI</h3>
-         </div>
+        <div class="w-full py-28 px-10 bg-white ">
+            <h1 class="text-8xl tracking-tighter">&reg; My Recent Works.</h1>
+            <div class="w-1/2 p-3 flex flex-col gap-10 mt-32">
+                <h3 class="text-5xl">RokanMitra</h3>
+                <h3 class="text-5xl">ParallaxWebsite</h3>
+                <h3 class="text-5xl">ochi.design-regenerated</h3>
+                <h3 class="text-5xl">RealtimeClickConting</h3>
+                <h3 class="text-5xl">Draggable-ImageContent</h3>
+                <h3 class="text-5xl">Draggable-MenuBoxes</h3>
+                <h3 class="text-5xl">Jarvis AI</h3>
+                <h3 class="text-5xl">GSAP-React_CircleAnimation</h3>
+                <h3 class="text-5xl">GSAP-React_RandomAnimation</h3>
+                <h3 class="text-5xl">GSAP-React_ImageAnimation</h3>
+                <h3 class="text-5xl">GSAP_Text-Animations</h3>
+                <h3 class="text-5xl">GSAP_NAvbarAnimations</h3>
+                <h3 class="text-5xl">GSAP_CustomCursor</h3>
+                <h3 class="text-5xl">Image-gallery_Next.js</h3>
+                <h3 class="text-5xl">React-Native_BottomSheet</h3>
+                <h3 class="text-5xl">AppUI</h3>
+                <h3 class="text-5xl">TabNavigation</h3>
+                <h3 class="text-5xl">AllAboutBharat</h3>
+                <h3 class="text-5xl">React-NativeAI</h3>
+            </div>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
@@ -95,6 +95,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
         integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
     <script>
 
         const canvas = document.querySelector("canvas");
@@ -225,6 +226,28 @@
         Window.addEventListener("resize", function () {
             loadImage(Math.floor(frames.currentIndex));
         })
+        const lenis = new Lenis()
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+
+        document.querySelectorAll(".headings h3")
+            .forEach(function (elem) {
+                gsap.from(elem, {
+                    scrollTrigger: {
+                        trigger: elem,
+                        start: "top 90%",
+                        end: "bottom 20%",
+                        scrub: 2
+                    },
+                    opacity: .3
+                })
+            })
+
     </script>
 </body>
 
